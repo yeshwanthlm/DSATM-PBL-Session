@@ -1,2 +1,25 @@
-# DSATM-PBL-Session
-DSATM PBL Session
+# DSATM PBL Session
+
+## Projects:
+
+#,Project Name,Expanded Description,AWS Services Used
+1,"Serverless ""Contact Us"" Form","Build a website contact form that triggers a backend process. When a user submits their name and email via a web interface (API Gateway), a Lambda function processes the data and sends a formatted notification email to the administrator.","Lambda, API Gateway, SES (Simple Email Service)"
+2,Automated Image Resizer,"Create an automated pipeline for media processing. Whenever an image is uploaded to a specific S3 bucket (""Source""), an S3 Event Trigger fires a Lambda function that resizes the image into a thumbnail and saves it to a ""Processed"" bucket.","S3, Lambda, CloudWatch (Logs)"
+3,Cloud-Based Phonebook (CRUD),"Develop a simple application to manage student records. Users can add, view, update, and delete contact details through an API. This teaches the basics of NoSQL database interactions and RESTful API design.","DynamoDB, Lambda, API Gateway"
+4,Text-to-Speech Converter,"Build a tool that converts written notes into audio. A student uploads a .txt file to S3, which triggers a Lambda function to call Amazon Polly to synthesize the text into an MP3 file, which is then stored back in S3.","Amazon Polly, Lambda, S3"
+5,Celebrity Face Detector,Use AI to identify famous personalities in images. Create a simple interface where an uploaded photo is analyzed by AWS Rekognition to return the name and details of any recognized celebrities in the picture.,"Amazon Rekognition, Lambda, S3"
+6,Global Portfolio Delivery,Host a personal portfolio website and ensure it loads fast globally. Secure the site with an SSL certificate and use a Content Delivery Network (CDN) to cache the website content at edge locations near the users.,"S3 (Static Hosting), CloudFront, ACM (Certificate Manager)"
+7,Auto-Start/Stop Scheduler,"A cost-optimization project where a Boto3 script (or Lambda) is scheduled to run at specific times (e.g., 9 AM and 6 PM) to automatically start or stop development EC2 instances, ensuring no charges during off-hours.","EC2, Lambda, EventBridge (CloudWatch Events)"
+8,Cloud Watchdog Billing Alarm,Set up a proactive monitoring system. Configure a CloudWatch alarm that tracks estimated AWS charges and sends an immediate SMS or Email notification to the user if the monthly spend exceeds a $5 threshold.,"CloudWatch, SNS (Simple Notification Service)"
+9,Mass Email Automator,Automate college newsletters or event invites. Create a script that reads a list of student emails from a CSV file stored in S3 and uses a verified email identity to send personalized bulk emails.,"Lambda, SES, S3"
+10,Language Translator Bot,A simple translation utility. Build an API that accepts English text and uses AWS's machine learning service to provide an accurate translation into local languages like Hindi or Kannada.,"Amazon Translate, Lambda, API Gateway"
+11,SQL Inventory Manager,"Set up a relational database for a ""College Library"" system. Students will learn how to provision a managed SQL database, create tables for books and authors, and run standard SQL queries (SELECT, INSERT) from a script.",RDS (MySQL or PostgreSQL)
+12,Resource Security Auditor,"Write a Boto3 script that scans all Security Groups in an AWS account and lists any that have port 22 (SSH) or 80 (HTTP) open to the entire internet (0.0.0.0/0), identifying potential security risks.","EC2, IAM, Boto3"
+13,S3 File Explorer & Utility,"Create a Python-based CLI tool that allows users to list all files in an S3 bucket, see their sizes, and download them. This focuses on mastering the Boto3 S3 client and resource methods.","S3, Boto3, Python"
+14,Custom Domain Setup,"Map a professional domain name to a cloud resource. Students learn how to manage DNS records (A records, CNAMEs) to point their own domain or a subdomain to an S3 website or an EC2 instance.",Route 53
+15,Serverless FAQ Chatbot,Build a conversational interface for college FAQs (like admissions or exam dates). Use a managed bot service to handle natural language understanding and trigger Lambda for specific data lookups.,"Amazon Lex, Lambda"
+16,S3 Data Ingestion Pipeline,"Create a ""Data Lake"" entry point. As soon as a raw data file (JSON) is uploaded to S3, a Lambda function parses the file and automatically inserts each record into a DynamoDB table for structured querying.","S3, Lambda, DynamoDB"
+17,Secret Manager Vault Demo,"Security best practices project. Instead of hardcoding database passwords in a Python script, students learn to store credentials in a secure vault and programmatically fetch them during runtime.","AWS Secrets Manager, Boto3"
+18,Daily Motivational Quotes API,"A serverless API that serves content. Store a collection of 365 quotes in DynamoDB. When the API is called, it fetches a ""Quote of the Day"" and returns it in a JSON format to the user.","DynamoDB, API Gateway, Lambda"
+19,EC2 Health Reporter,"An automation script that runs daily and generates a summary report (sent via email) listing all running instances, their instance types, and their current CPU utilization over the last 24 hours.","EC2, CloudWatch, SNS, Boto3"
+20,Secure Multi-User Login,"Add authentication to a simple web app. Use a managed user pool to allow students to ""Sign Up"" and ""Log In"" with email verification, without the developer having to manage a password database.",Amazon Cognito
